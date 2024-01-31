@@ -32,18 +32,6 @@ export default function App() {
     setData(dataArr);
   };
 
-  useEffect(() => {
-    const handlewidth = () => {
-      let elem = document.getElementById('mybox');
-      if (elem) {
-        setHtop(elem.getBoundingClientRect().top);
-        setHleft(elem.getBoundingClientRect().left);
-      }
-    };
-
-    handlewidth();
-  }, []);
-
   return (
     <div className="App">
 
