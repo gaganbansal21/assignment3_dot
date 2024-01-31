@@ -1,38 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import TodoAdd from './component/todoAdd';
-// import TodoShow from './component/todoShow';
-// import { useState } from 'react';
 
-
-
-
-// function App() {
-
-
-//   // const[setData,setShowData] = useState([]);
-//   // // console.log("H", setData);
-//   // // console.log("data",setShowData);
-
-//   // const handleDeleteFunction = (value) =>{
-//   //   setShowData([...value]);
-//   //   // console.log("value",value);
-//   // } 
-
-//   return (
-
-//     <div className="App">
-//         {/* <TodoAdd sendDataToParnt = {(e) => {setShowData([...setData,e])}} /> */}
-//         {/* <TodoAdd handleData= { (e) => (setShowData(...setData,{e.target.title,e.target.decription}))}  /> */}
-//         {/* <TodoShow data = {setData} onChange={handleDeleteFunction} /> */}
-
-
-
-//     </div>  
-//   );
-// }
-
-// export default App;
 import "./App.css";
 import { useState, useEffect } from "react";
 
@@ -77,8 +43,8 @@ export default function App() {
   return (
     <div className="App">
 
-<div className="container">
-        <label> Hi </label>
+      <div className="container">
+        <label> Dots Count : </label>
         <input
           id="number"
           value={value}
@@ -97,19 +63,20 @@ export default function App() {
             className="dot"
             style={{
               position: "absolute",
-              top: `${  item.y}px`,
-              left: `${ item.x}px`,
+              top: `${item.y}px`,
+              left: `${item.x}px`,
               backgroundColor: `${item.z === 1 ? "red" : "blue"}`,
               width: '4px',
               height: '4px',
               borderRadius: '50%',
+              transitionDelay: "0.2s",
             }}
             key={index}
           />
         ))}
       </div>
 
-      
+
 
 
     </div>
