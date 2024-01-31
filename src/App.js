@@ -3,11 +3,15 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 export default function App() {
-  const [value, setValue] = useState(1);
-  const [data, setData] = useState([{ x: 0, y: 0, z: 1 }]);
+  const [value, setValue] = useState(0);
+  const [data, setData] = useState([]);
   const [htop, setHtop] = useState(0);
   const [hleft, setHleft] = useState(0);
 
+  const handleClear = () =>{ 
+    setValue(0);
+    setData([]);
+  }
 
   const handleBubbles = () => {
     const dataArr = [];
@@ -55,6 +59,7 @@ export default function App() {
           max={10000}
         />
         <button onClick={handleBubbles}>Submit</button>
+        <button onClick={handleClear}>Clear</button>
       </div>
 
       <div id="mybox" className="box-container">
